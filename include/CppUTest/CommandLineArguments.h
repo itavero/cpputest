@@ -42,6 +42,7 @@ public:
 
     bool parse(TestPlugin* plugin);
     bool isVerbose() const;
+    bool doShowVersion() const;
     bool isColor() const;
     bool isListingTestGroupNames() const;
     bool isListingTestGroupAndCaseNames() const;
@@ -66,6 +67,7 @@ private:
     const char** av_;
 
     bool verbose_;
+    bool showVersion_;
     bool color_;
     bool runTestsAsSeperateProcess_;
     bool listTestGroupNames_;

@@ -102,6 +102,11 @@ int CommandLineTestRunner::runAllTests()
     int failureCount = 0;
     int repeat_ = arguments_->getRepeatCount();
 
+    if (arguments_->doShowVersion()) {
+        output_->print(CPPUTEST_VERSION);
+        return 0;
+    }
+
     if (arguments_->isListingTestGroupNames())
     {
         TestResult tr(*output_);
